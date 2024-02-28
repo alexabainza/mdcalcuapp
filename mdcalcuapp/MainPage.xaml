@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="mdcalcuapp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <BoxView
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="4"
+            BackgroundColor="Black" />
+        <Label
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="4"
+            FontSize="100"
+            HorizontalOptions="End"
+            Text="0"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Button
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="Green"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="C" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Red"
+            BorderColor="Black"
+            BorderWidth="2"
+            CornerRadius="0"
+            FontSize="25"
+            Text="Del" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="/"
+            TextColor="White" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="7"
+            TextColor="White" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="8"
+            TextColor="White" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="9"
+            TextColor="White" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="4"
+            TextColor="White" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="5"
+            TextColor="White" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="6"
+            TextColor="White" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="7"
+            TextColor="White" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="1"
+            TextColor="White" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="2"
+            TextColor="White" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="3"
+            TextColor="White" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="0"
+            TextColor="White" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Gray"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="."
+            TextColor="White" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="X"
+            TextColor="White" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="-"
+            TextColor="White" />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="+"
+            TextColor="White" />
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            FontSize="25"
+            Text="="
+            TextColor="White" />
+
+    </Grid>
+
+
+</ContentPage>
