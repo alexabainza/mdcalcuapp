@@ -46,38 +46,9 @@
             Text="0"
             TextColor="White"
             VerticalOptions="Center" />
-        <Button
-            x:Name="btnC"
-            Grid.Row="2"
-            Grid.ColumnSpan="2"
-            BackgroundColor="Green"
-            BorderColor="Black"
-            BorderWidth="2"
-            Clicked="btnCanc_Clicked"
-            FontSize="25"
-            Text="C" />
-        <Button
-            Grid.Row="2"
-            Grid.Column="2"
-            Grid.ColumnSpan="1"
-            BackgroundColor="Red"
-            BorderColor="Black"
-            BorderWidth="2"
-            Clicked="btnDel_Clicked"
-            CornerRadius="0"
-            FontSize="25"
-            Text="Del" />
-        <Button
-            Grid.Row="2"
-            Grid.Column="3"
-            Grid.ColumnSpan="1"
-            BackgroundColor="Orange"
-            BorderColor="Black"
-            BorderWidth="2"
-            Clicked="btnOperation_Clicked"
-            FontSize="25"
-            Text="/"
-            TextColor="White" />
+
+
+
         <Button
             Grid.Row="3"
             Grid.Column="0"
@@ -199,6 +170,9 @@
             FontSize="25"
             Text="0"
             TextColor="White" />
+
+
+        <!--  OTHER FUNCTIONS  -->
         <Button
             Grid.Row="6"
             Grid.Column="2"
@@ -210,8 +184,32 @@
             FontSize="25"
             Text="."
             TextColor="White" />
+
         <Button
-            Grid.Row="3"
+            x:Name="btnC"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="Green"
+            BorderColor="Black"
+            BorderWidth="2"
+            Clicked="btnCanc_Clicked"
+            FontSize="25"
+            Text="C" />
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Red"
+            BorderColor="Black"
+            BorderWidth="2"
+            Clicked="btnDel_Clicked"
+            CornerRadius="0"
+            FontSize="25"
+            Text="Del" />
+        <!--  OPERATIONS COLUMN  -->
+        <Button
+            Grid.Row="2"
             Grid.Column="3"
             Grid.ColumnSpan="1"
             BackgroundColor="Orange"
@@ -219,7 +217,7 @@
             BorderWidth="2"
             Clicked="btnOperation_Clicked"
             FontSize="25"
-            Text="X"
+            Text="/"
             TextColor="White" />
 
         <Button
@@ -235,17 +233,6 @@
             TextColor="White" />
 
         <Button
-            Grid.Row="5"
-            Grid.Column="3"
-            Grid.ColumnSpan="1"
-            BackgroundColor="Orange"
-            BorderColor="Black"
-            BorderWidth="2"
-            Clicked="btnOperation_Clicked"
-            FontSize="25"
-            TextColor="White" />
-
-        <Button
             Grid.Row="6"
             Grid.Column="3"
             Grid.ColumnSpan="1"
@@ -256,7 +243,30 @@
             CommandParameter="="
             FontSize="25"
             Text="=" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            Clicked="btnOperation_Clicked"
+            FontSize="25"
+            Text="X"
+            TextColor="White" />
 
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="1"
+            BackgroundColor="Orange"
+            BorderColor="Black"
+            BorderWidth="2"
+            Clicked="btnOperation_Clicked"
+            FontSize="25"
+            Text="+"
+            TextColor="White" />
     </Grid>
 
 
