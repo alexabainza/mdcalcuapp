@@ -233,7 +233,7 @@
             BackgroundColor="Gray"
             BorderColor="Black"
             BorderWidth="2"
-            Clicked="btnDot_Clicked"
+            Clicked="btnDel_Clicked"
             FontSize="25"
             Style="{StaticResource GrayButtonClickStyle}"
             Text="DEL"
