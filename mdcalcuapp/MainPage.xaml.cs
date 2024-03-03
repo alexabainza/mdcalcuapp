@@ -23,6 +23,8 @@ namespace mdcalcuapp
             {
                 lblHistory.Text = string.Format("{0} {1} {2}", lblHistory.Text, lblValue.Text, b.Text);
             }
+
+            //adds text to the previous values
             lblValue.Text = "0";
         }
 
@@ -30,9 +32,8 @@ namespace mdcalcuapp
         {
             lblHistory.Text = "0";
             lblValue.Text = "0";
-
-
         }
+
         private void btnDel_Clicked(object sender, EventArgs e)
         {
             if(lblValue.Text != "0") { 
@@ -41,9 +42,8 @@ namespace mdcalcuapp
                     lblValue.Text = "0";
                         }
             }
-
-
         }
+
         private void btnDot_Clicked(object sender, EventArgs e)
         {
             if (lblValue.Text.Contains(".") is false)
@@ -51,6 +51,7 @@ namespace mdcalcuapp
                 lblValue.Text += ".";
             }
         }
+
         private void btnGetResult_Clicked(object sender, EventArgs e)
         {
             string final = lblHistory.Text + " " + lblValue.Text;
