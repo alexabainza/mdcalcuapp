@@ -25,6 +25,7 @@ namespace mdcalcuapp
 
         private void btnCanc_Clicked(object sender, EventArgs e)
         {
+            currentState = 1;
             firstNum = 0;
             secondNum = 0;
             currentState = 1;
@@ -53,16 +54,29 @@ namespace mdcalcuapp
         {
            if(currentState == 2)
             {
-                var result = Calculate.DoCalculate(firstNum, secondNum, operation);
-                this.result.Text = result.ToString();
-                firstNum = result;
-                currentState = -1;
+                if (operation == "/" && secondNum == 0)
+                {
+                    this.result.Text = "INVALID!";
+                    currentState = -99;
+                } else
+                {
+                    var result = Calculate.DoCalculate(firstNum, secondNum, operation);
+                    this.result.Text = result.ToString();
+                    firstNum = result;
+                    currentState = -1;
+                }
+
             }
         }
         private void btnNumber_Clicked(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            if(this.result.Text == "0" || currentState < 0)
+            if(currentState == -99)
+            {
+                btnCanc_Clicked(this, null);
+            }
+
+            if (this.result.Text == "0" || currentState < 0)
             {
                 this.result.Text = string.Empty;
                 if(currentState < 0)
@@ -76,7 +90,7 @@ namespace mdcalcuapp
             double number;
             if (double.TryParse(this.result.Text, out number))
             {
-                this.result.Text = number.ToString("N0");
+                this.result.Text = number.ToString("G");
                 if (currentState == 1)
                 {
                     firstNum = number;
