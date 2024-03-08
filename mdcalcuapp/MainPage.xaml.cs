@@ -5,7 +5,7 @@ namespace mdcalcuapp
 {
     public partial class MainPage : ContentPage
     {
-        bool isNewOperand = false;  // Flag to track new operand
+        bool isNewOperand = false;
 
         int currentState = 1;
         string operation;
@@ -53,9 +53,8 @@ namespace mdcalcuapp
             }
             else if (currentState == -2)
             {
-                // If operation is clicked but no digits entered for second operand
-                this.result.Text = "0.";  // Start with "0."
-                currentState *= -1;  // Move to positive state to allow number input
+                this.result.Text = "0.";
+                currentState *= -1;
             }
         }
         private void btnGetResult_Clicked(object sender, EventArgs e)
@@ -70,13 +69,16 @@ namespace mdcalcuapp
                 else
                 {
                     var result = Calculate.DoCalculate(firstNum, secondNum, operation);
+
+                    result = Math.Round(result, 4);
+
                     this.result.Text = result.ToString();
                     firstNum = result;
                     currentState = -1;
                 }
-
             }
         }
+
         private void btnNumber_Clicked(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -85,7 +87,6 @@ namespace mdcalcuapp
                 btnCanc_Clicked(this, null);
             }
 
-            // Reset current state and set new operand flag
             if (currentState < 0)
             {
                 currentState *= -1;
@@ -94,14 +95,13 @@ namespace mdcalcuapp
 
             if (isNewOperand)
             {
-                this.result.Text = b.Text;  // Set result.Text to new operand
+                this.result.Text = b.Text;
                 isNewOperand = false;
             }
             else
             {
-                this.result.Text += b.Text;  // Append to existing number
+                this.result.Text += b.Text; 
             }
-            // No need to clear result.Text here, append allows both whole and decimal
 
             double number;
             if (double.TryParse(result.Text, out number))
