@@ -49,7 +49,10 @@ namespace mdcalcuapp
         {
             if (currentState >= 0)
             {
-                this.result.Text += ".";
+                if (!result.Text.Contains("."))
+                {
+                    this.result.Text += ".";
+                }
             }
             else if (currentState == -2)
             {
@@ -57,6 +60,7 @@ namespace mdcalcuapp
                 currentState *= -1;
             }
         }
+
         private void btnGetResult_Clicked(object sender, EventArgs e)
         {
             if (currentState == 2)
