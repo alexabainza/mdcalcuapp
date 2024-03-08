@@ -5,6 +5,8 @@ namespace mdcalcuapp
 {
     public partial class MainPage : ContentPage
     {
+        bool isNewOperand = false;  // Flag to track new operand
+
         int currentState = 1;
         string operation;
         double firstNum, secondNum;
@@ -83,24 +85,26 @@ namespace mdcalcuapp
                 btnCanc_Clicked(this, null);
             }
 
-            // Reset current state to positive if negative (after operation)
+            // Reset current state and set new operand flag
             if (currentState < 0)
             {
                 currentState *= -1;
+                isNewOperand = true;
             }
 
-            // If number is being entered after an operation
-            if (currentState > 0)
+            if (isNewOperand)
             {
-                this.result.Text += b.Text;  // Append number to displayed text
+                this.result.Text = b.Text;  // Set result.Text to new operand
+                isNewOperand = false;
             }
-            else  // If starting a new number after operation
+            else
             {
-                this.result.Text = b.Text;  // Set result.Text to the new number
+                this.result.Text += b.Text;  // Append to existing number
             }
+            // No need to clear result.Text here, append allows both whole and decimal
 
             double number;
-            if (double.TryParse(this.result.Text, out number))
+            if (double.TryParse(result.Text, out number))
             {
                 this.result.Text = number.ToString("G");
                 if (currentState == 1)
@@ -113,6 +117,7 @@ namespace mdcalcuapp
                 }
             }
         }
+
 
     }
 
