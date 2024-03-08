@@ -6,10 +6,10 @@ namespace mdcalcuapp
     public partial class MainPage : ContentPage
     {
         bool isNewOperand = false;
-
+        
         int currentState = 1;
-        string operation;
-        double firstNum, secondNum;
+        string operation="";
+        double firstNum =0, secondNum=0;
 
         public MainPage()
         {
@@ -22,7 +22,17 @@ namespace mdcalcuapp
             currentState = -2;
 
             Button b = (Button)sender;
+
+            if(firstNum != 0 && secondNum != 0 && operation != "")
+            {
+                var result = Calculate.DoCalculate(firstNum, secondNum, operation);
+                firstNum = result;
+                secondNum = 0;
+                this.result.Text = firstNum.ToString();
+                
+            }
             operation = b.Text;
+
         }
 
         private void btnCanc_Clicked(object sender, EventArgs e)
@@ -78,6 +88,7 @@ namespace mdcalcuapp
 
                     this.result.Text = result.ToString();
                     firstNum = result;
+                    secondNum = 0;
                     currentState = -1;
                 }
             }
