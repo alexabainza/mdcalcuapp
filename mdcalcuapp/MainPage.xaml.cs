@@ -84,7 +84,7 @@ namespace mdcalcuapp
                 {
                     var result = Calculate.DoCalculate(firstNum, secondNum, operation);
 
-                    result = Math.Round(result, 4);
+                    result = Math.Round(result, 8);
 
                     this.result.Text = result.ToString();
                     firstNum = result;
